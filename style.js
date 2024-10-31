@@ -1,8 +1,27 @@
 function getting(response) {
+    console.log(response.data);
+    let type = document.querySelector("#type");
+    type.innerHTML = response.data.condition.description;
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = response.data.temperature.humidity;
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = response.data.wind.speed
+    
     let temperaturCity = document.querySelector("#tempo");
     temperaturCity.innerHTML = `${Math.round(response.data.temperature.current)}`;
     let heading = document.querySelector("h1");
     heading.innerHTML = response.data.city;
+    let now = new Date();
+    let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = weekDays[now.getDay()];
+    let getDay = document.querySelector("#day");
+    getDay.innerHTML = day;
+    let hour = now.getHours();
+    let getHour = document.querySelector("#hour");
+    getHour.innerHTML = hour;
+    let minute = now.getMinutes();
+    let getminute = document.querySelector("#minute");
+    getminute.innerHTML = minute;
 
 }
 function searchcity(city) {
