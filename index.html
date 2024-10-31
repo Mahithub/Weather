@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <div class="all">
 <header>
     <div>
-        <form>
-            <input class="form1" type="search" placeholder="Enter a city..">
-            <input class="form2" type="submit" placeholder="Search">
+        <form id="search-element">
+            <input id="form1" class="form1" type="search" placeholder="Enter a city..">
+            <input id="form2" class="form2" type="submit" value="Search">
         </form>
     </div>
 </header>
@@ -25,7 +26,7 @@
     </div>
     <div class="temprature-container">
         <div class="no1">☀️</div>
-        <div class="no2">24</div>
+        <div class="no2" id="tempo">24</div>
         <div class="no3">°C</div>
     </div>
     </div>
@@ -65,5 +66,6 @@
         href="https://github.com/Mahithub/Weather" target="_blank">
         open-sourced on Github </a> and <a href="https://mahi-app.netlify.app/" target="_blank"> hosted on Netlify </a>
 </footer>
+    <script src="style.js"></script>
 </div>
 </html>
