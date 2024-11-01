@@ -23,6 +23,13 @@ function getting(response) {
     let getminute = document.querySelector("#minute");
     getminute.innerHTML = minute;
 
+    let icon = document.querySelector("#icoon");
+    icon.innerHTML = `<img src="${response.data.condition.icon_url}" alt="" class="no1">`;
+    
+    if (minute < 10) {
+        minute = `0${minute}`;
+    }
+
 }
 function searchcity(city) {
     let apikey = "795fc3dt59e943954b5e5aoc405fb9c4";
